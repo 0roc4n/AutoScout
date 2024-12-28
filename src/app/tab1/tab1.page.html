@@ -5,9 +5,22 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <div class="border-2 mx-5 my-2 rounded-xl px-5 flex space-x-5">
+  <!-- <div class="border-2 mx-5 my-2 rounded-xl px-5 flex space-x-5">
     <i class="fa-solid fa-magnifying-glass text-2xl mt-2" ></i>
     <ion-input placeholder="Search Products"></ion-input>
+  </div> -->
+  <div class="mt-3">
+    <ion-toolbar>
+      <ion-searchbar
+        debounce="500"
+        #searchInput
+        mode="ios"
+        placeholder="Search Products"
+        (ionInput)="onSearchChange($event)"
+      >
+        
+      </ion-searchbar>
+    </ion-toolbar>
   </div>
 
   <ion-row>

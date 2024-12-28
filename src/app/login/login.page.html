@@ -11,9 +11,12 @@
     </ion-toolbar>
   </ion-header> -->
   <div>
-    <i [routerLink]="['/landing']" class="fa-solid fa-chevron-left py-10 px-4 text-3xl text-blue-500"></i>
+    <i [routerLink]="['/landing']" class="fa-solid fa-chevron-left py-10 px-4 text-3xl text-yellow-500"></i>
   </div>
-  <div class="mx-10 py-5 mt-20">
+  <div class="flex justify-center">
+    <img src="assets/images/logo.png" class="w-40" alt="">
+  </div>
+  <div class="mx-10 py-5 mt-10">
     <p class="text-center font-semibold text-3xl">Welcome Back</p>
     <form class="mt-10">
       <ion-item>
@@ -28,10 +31,13 @@
         <a href="" [routerLink]="['/landing']">Forgot password?</a>
       </div>
       <div>
-        <ion-button expand="block" [routerLink]="['/tabs/tab1']">Sign In</ion-button>
+        <div class="bg-yellow-500 text-white rounded-xl py-3 text-center mt-5">
+          <button [routerLink]="['/tabs/tab1']" class="text-lg">Sign In</button>
+        </div>
+        <!-- <ion-button expand="block" [routerLink]="['/tabs/tab1']">Sign In</ion-button> -->
       </div>
       <div class="text-center">
-        <p>Don't have account? <a href="" [routerLink]="['/signup']"> <span class="text-blue-500">Sign up</span></a></p>
+        <p>Don't have account? <a href="" [routerLink]="['/signup']"> <span class="text-yellow-500">Sign up</span></a></p>
       </div>
     </form>
   </div>

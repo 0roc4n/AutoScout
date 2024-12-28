@@ -5,10 +5,23 @@
     </ion-title>
   </ion-toolbar>
 </ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-button [routerLink]="['/login']" expand="block" class="mt-5">
-    <i class="fa-solid fa-right-from-bracket"></i>
-    <ion-label>Log Out</ion-label>
-  </ion-button>
+  <!-- <ion-searchbar></ion-searchbar> -->
+  <div class="flex justify-center bg-blue-400">
+    <div class="w-40 rounded-full mt-10 bg-white">
+      <ion-img src="assets/images/avatar.png"></ion-img>
+    </div>
+  </div>
+  <div>
+    <div class="flex justify-center">
+      <p class="text-2xl font-bold mt-5">
+        Personal Information
+      </p>
+    </div>
+   <ion-list>
+    <ion-item>
+      <input type="text" placeholder="Name" class="w-96 rounded-lg" disabled>
+    </ion-item>
+   </ion-list>
+  </div>
 </ion-content>
