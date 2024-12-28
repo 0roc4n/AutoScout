@@ -20,11 +20,19 @@
     <p class="text-center font-semibold text-3xl">Welcome Back</p>
     <form class="mt-10">
       <ion-item>
-        <ion-input label="Email Address" labelPlacement="floating" placeholder="juandelacruz@email.com"></ion-input>
+        <ion-input
+        [(ngModel)]="gEmail"
+        [ngModelOptions]="{standalone: true}"
+         label="Email Address" labelPlacement="floating" placeholder="juandelacruz@email.com"></ion-input>
+       
         <i class="fa-solid fa-user text-2xl mt-2"></i>
       </ion-item>
       <ion-item>
-        <ion-input label="Passsword" labelPlacement="floating" placeholder="********"></ion-input>
+        <ion-input
+        [(ngModel)]="gPassword"
+        [ngModelOptions]="{standalone: true}"
+         label="Passsword" labelPlacement="floating" placeholder="********"></ion-input>
+        
         <i class="fa-solid fa-lock text-2xl mt-2"></i>
       </ion-item>
       <div class="text-end">
@@ -32,9 +40,10 @@
       </div>
       <div>
         <div class="bg-yellow-500 text-white rounded-xl py-3 text-center mt-5">
-          <button [routerLink]="['/tabs/tab1']" class="text-lg">Sign In</button>
+          <!-- <button [routerLink]="['/tabs/tab1']" class="text-lg">Sign In</button> -->
+          <button (click)="loginUser()" class="text-lg">Sign In</button>
         </div>
-        <!-- <ion-button expand="block" [routerLink]="['/tabs/tab1']">Sign In</ion-button> -->
+        <!-- <ion-button expand="block" (click)="loginUser()">Sign In</ion-button> -->
       </div>
       <div class="text-center">
         <p>Don't have account? <a href="" [routerLink]="['/signup']"> <span class="text-yellow-500">Sign up</span></a></p>
