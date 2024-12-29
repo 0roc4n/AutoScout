@@ -17,16 +17,15 @@
         debounce="500"
         #searchInput
         mode="ios"
-        placeholder="Search Cars..."
+        placeholder="Looking for..."
         (ionInput)="onSearchChange($event)"
       >
-        
       </ion-searchbar>
     </ion-toolbar>
   </div>
   <div class="mx-5 flex text-yellow-500 justify-between gap-5">
     <div class="border-b-2 border-yellow-500 w-1/4 text-center">
-      <i class="fa-solid fa-car text-3xl text-center"></i>
+      <i class="fa-solid fa-car text-3xl text-center"  [routerLink]="['/cars']"></i>
       <p class="text-center">Cars</p>
     </div>
     <div class="border-b-2 border-yellow-500 w-1/4 text-center">

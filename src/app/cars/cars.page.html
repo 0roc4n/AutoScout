@@ -1,0 +1,53 @@
+<ion-content [fullscreen]="true">
+  <div class="py-2 px-2 bg-yellow-500">
+    <p class="text-center italic text-white font-semibold tracking-widests">All Cars</p>
+    <div class="flex justify-between">
+      <i [routerLink]="['/tabs/tab1']" class="fa-solid fa-chevron-left text-xl text-white mt-4"></i>
+        <ion-searchbar
+          debounce="500"
+          #searchInput
+          mode="ios"
+          placeholder="Search for Cars..."
+        >
+        </ion-searchbar>
+    </div>
+  </div>
+  <div class="flex border-b-2 py-2 px-2">
+    <div class="w-1/6">
+      <i class="fa-solid fa-filter"></i>
+      Sort
+    </div>
+    <div class="w-5/6 border-r-2">
+      <swiper-container
+      [loop]="true"
+      slides-per-view="3"
+      class="space-x-5"
+      >
+      <swiper-slide class="flex bg-gray-400 px-2 rounded-lg lg:justify-center">
+        <img src="assets/images/sedan.png" alt="" class="w-12">
+        <p class="text-white">Sedan</p>
+      </swiper-slide>
+      <swiper-slide class="flex bg-gray-400 px-2 rounded-lg lg:justify-center">
+        <img src="assets/images/sedan.png" alt="" class="w-12">
+        <p class="text-white">SUV</p>
+      </swiper-slide>
+      <swiper-slide class="flex bg-gray-400 px-2 rounded-lg lg:justify-center">
+        <img src="assets/images/sedan.png" alt="" class="w-12">
+        <p class="text-white">Trucks</p>
+      </swiper-slide>
+      <swiper-slide class="flex bg-gray-400 px-2 rounded-lg lg:justify-center">
+        <img src="assets/images/sedan.png" alt="" class="w-12">
+        <p class="text-white">Coupe</p>
+      </swiper-slide>   
+      <swiper-slide class="flex bg-gray-400 px-2 rounded-lg lg:justify-center">
+        <img src="assets/images/sedan.png" alt="" class="w-12">
+        <p class="text-white">Convertible</p>
+      </swiper-slide>
+      <swiper-slide class="flex bg-gray-400 px-2 rounded-lg lg:justify-center">
+        <img src="assets/images/sedan.png" alt="" class="w-12">
+        <p class="text-white">Hatch</p>
+      </swiper-slide>
+      </swiper-container>
+    </div>
+  </div>
+</ion-content>
