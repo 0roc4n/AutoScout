@@ -1,13 +1,101 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>signup</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">signup</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="p-5 mt-20">
+    <div class="w-16">
+      <img src="assets/images/logo.png" alt="">
+    </div>
+    <div class="mt-5">
+      <i>
+        <p class="font-bold text-xl">Create New Account</p>
+      </i>
+      <div class="mt-5">
+        <form class="space-y-5" #signupForm="ngForm" (ngSubmit)="onSubmit()">
+          <ion-input
+            class="custom"
+            color="warning"
+            label="First Name"
+            label-placement="floating"
+            fill="solid"
+            placeholder="Enter text"
+            type="text"
+            [(ngModel)]="formData.firstName"
+            name="firstName"
+            required
+          ></ion-input>
+
+          <ion-input
+            class="custom"
+            color="warning"
+            label="Last Name"
+            label-placement="floating"
+            fill="solid"
+            placeholder="Enter text"
+            type="text"
+            [(ngModel)]="formData.lastName"
+            name="lastName"
+            required
+          ></ion-input>
+
+          <ion-input
+            class="custom"
+            color="warning"
+            label="Phone Number"
+            label-placement="floating"
+            fill="solid"
+            placeholder="Enter text"
+            type="number"
+            [(ngModel)]="formData.phoneNumber"
+            name="phoneNumber"
+            required
+          ></ion-input>
+
+          <ion-input
+            class="custom"
+            color="warning"
+            label="Email Address"
+            label-placement="floating"
+            fill="solid"
+            placeholder="Enter text"
+            type="email"
+            [(ngModel)]="formData.email"
+            name="email"
+            required
+          ></ion-input>
+
+          <ion-input
+            class="custom"
+            color="warning"
+            label="Password"
+            label-placement="floating"
+            fill="solid"
+            placeholder="Enter text"
+            type="password"
+            [(ngModel)]="formData.password"
+            name="password"
+            required
+          ></ion-input>
+
+          <p class="text-center">
+            By signing up, I agree to AutoScout's
+            <span class="text-yellow-500">Terms of Service</span> and
+            <span class="text-yellow-500">Privacy Policy</span>
+          </p>
+
+          <ion-button
+            class="ion-button"
+            expand="block"
+            color="warning"
+            type="submit"
+          >
+            <span class="text-white text-lg">Sign Up</span>
+          </ion-button>
+        </form>
+        <p class="mt-2 text-center">
+          Already a Member?
+          <span class="text-yellow-500">
+            <a [routerLink]="['/login']">Login Here</a>
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
 </ion-content>
