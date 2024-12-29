@@ -66,6 +66,7 @@ export class SignupPage implements OnInit {
         const errorMessage = error.message;
         console.error('Error signing up user:', errorMessage);
         console.error('Error code:', errorCode);
+        this.presentToast(errorMessage, 'top');
         // ..
       });
   }
