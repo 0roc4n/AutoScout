@@ -1,0 +1,18 @@
+.custom {
+    --border-color: none;
+    --background: #d5d4d4; /* Customize background */
+    --placeholder-color: #ccc; /* Placeholder color */
+    --font-size: 20px; /* Font size */
+    --padding-start: 10px; /* Padding on the left */
+    --padding-end: 10px; /* Padding on the right */
+    --padding-top: 0px; /* Padding on the top */
+    --padding-bottom: 5px; /* Padding on the bottom */
+    --label-font-weight: bold; /* Not natively available */
+    --border-radius: 10px; /* Border radius */
+  }
+  .bold-label {
+    font-weight: bold;
+  }
+  .ion-button {
+    --color: white;
+  }
