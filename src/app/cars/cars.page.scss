@@ -1,0 +1,9 @@
+ion-img {
+    width: 100%; /* Desired width */
+    height: 250px; /* Desired height */
+    object-fit: cover; /* Ensures the image fits within the dimensions without distortion */
+    margin:  auto; /* Centers the image inside the swiper-slide */
+    border-radius: 30%;
+    /* Optional: Adds rounded corners */
+  }
+  
