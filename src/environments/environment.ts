@@ -4,11 +4,12 @@
 
 export const environment = {
   production: true,
-  firebase:  {
+  firebase: {
     apiKey: "AIzaSyBDW9ClwbqaCL1EjB7jmAhlguithZBZwUw",
     authDomain: "autoscout-986c7.firebaseapp.com",
+    databaseURL: "https://autoscout-986c7-default-rtdb.asia-southeast1.firebasedatabase.app",
     projectId: "autoscout-986c7",
-    storageBucket: "autoscout-986c7.firebasestorage.app",
+    storageBucket: "autoscout-986c7.appspot.com",
     messagingSenderId: "91664821864",
     appId: "1:91664821864:web:7d01ff774755e2895015dd"
   }
