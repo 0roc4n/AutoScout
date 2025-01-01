@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonApp, IonRouterOutlet } from '@ionic/angular/standalone';
 import { initializeApp } from 'firebase/app';
+// import { AngularFireDatabaseMod } from '@angular/fire/compat/database';
 import { getAuth } from 'firebase/auth';  // If you want to use Firebase Authentication
 import { environment } from '../environments/environment';  // Firebase configuration
 import { register } from 'swiper/element/bundle';

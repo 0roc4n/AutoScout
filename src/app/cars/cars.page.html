@@ -50,4 +50,24 @@
       </swiper-container>
     </div>
   </div>
+  <div class="grid grid-cols-2 gap-2 px-2 py-2">
+    <p class="text-lg">Showing {{ cars.length }} results</p>
+  </div>
+  <div>
+    <div class="grid grid-cols-1 gap-2 px-2 py-2">
+      <div *ngFor="let car of cars; let i = index">
+        <ion-card>
+          <div class="px-5 py-2 flex justify-center">
+            <ion-img [src]="'assets/images/sedan.png'"></ion-img>
+          </div>
+          <div class="h-24">
+            <p class="text-center font-bold text-lg">{{car?.name}}</p>
+            <div class="flex mx-5 justify-between gap-2">
+              <p class=" text-lg text-blue-400">Php {{car?.price}}</p>
+            </div>
+          </div>
+        </ion-card>
+      </div>
+    </div>
+  </div>
 </ion-content>
