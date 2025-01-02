@@ -16,8 +16,9 @@ import { IonSearchbar, IonImg, IonCol, IonRow, IonButton,IonContent, IonHeader, 
 })
 
 export class Tab1Page implements OnInit {
-  cars: any[] = [];
-  constructor(private latestcarsService: LatestcarsService) {}
+  cars: any[] = []; // Array to hold the car data
+
+  constructor(private firebaseService: LatestcarsService) {}
 
   ngOnInit() {
     this.loadRecentCars();
@@ -25,7 +26,8 @@ export class Tab1Page implements OnInit {
 
   async loadRecentCars() {
     try {
-      this.cars = await this.latestcarsService.getRecentCars('cars'); // Fetch recent cars
+      const data = await this.firebaseService.getRecentCars('autoscout_db/cars');
+      this.cars = Object.values(data).reverse(); // Convert to array and reverse for correct order
       console.log('Recent cars:', this.cars);
     } catch (error) {
       console.error('Error loading recent cars:', error);
