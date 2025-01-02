@@ -5,7 +5,7 @@ import { getDatabase, ref, query, limitToLast, orderByChild, get } from 'firebas
   providedIn: 'root',
 })
 export class LatestcarsService {
-  private readonly CARS_LIMIT = 5; // Constant limit for the number of cars
+  private readonly CARS_LIMIT = 6; // Constant limit for the number of cars
 
   // Method to fetch the most recent cars
   async getRecentCars(path: string) {
