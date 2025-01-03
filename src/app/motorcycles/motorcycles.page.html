@@ -1,0 +1,15 @@
+<ion-content [fullscreen]="true">
+  <div class="py-2 px-2 bg-yellow-500">
+    <p class="text-center italic text-white font-semibold tracking-widests">All Motorcycles</p>
+    <div class="flex justify-between">
+      <i [routerLink]="['/tabs/tab1']" class="fa-solid fa-chevron-left text-xl text-white mt-4"></i>
+        <ion-searchbar
+          debounce="500"
+          #searchInput
+          mode="ios"
+          placeholder="Search for Motorcycles..."
+        >
+        </ion-searchbar>
+    </div>
+  </div>
+</ion-content>
