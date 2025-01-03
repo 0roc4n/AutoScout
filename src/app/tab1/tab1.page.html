@@ -34,7 +34,7 @@
       <p class="text-center">Scout Promos</p>
     </div>
     <div class="border-b-2 border-yellow-500  text-center">
-      <i class="fa-solid fa-motorcycle text-3xl text-center"></i>
+      <i class="fa-solid fa-motorcycle text-3xl text-center" [routerLink]="'/motorcycles'"></i>
       <p class="text-center">Motorcycles</p>
     </div>
    <div class="border-b-2 border-yellow-500  text-center">
@@ -50,14 +50,13 @@
     <div class="bg-yellow-100 py-5">
       <swiper-container
         slides-per-view="1"
-        
       >
         <swiper-slide *ngFor="let car of cars; let i = index" class="flex">
           <div class="flex justify-center mx-10">
             <div class="border-1 bg-white rounded-xl p-2 shadow-xl space-y-5">
-              <div class="flex justify-between">
+              <div class="flex justify-between px-2">
                 <p class="text-xl font-bold">{{car?.name}}</p>
-                <i class="fa-regular fa-heart"></i>
+                <i class="fa-regular fa-heart text-2xl"></i>
               </div>
               <div>
                 <img [src]="'assets/images/corolla.jpg'" class="rounded-lg" alt="">
@@ -70,6 +69,9 @@
           </div>
         </swiper-slide>
       </swiper-container>
+    </div>
+    <div>
+      <p>Car Makers</p>
     </div>
   </div>
 </ion-content>
